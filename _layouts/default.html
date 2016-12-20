@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="/css/fonts.css">
+  <link rel="stylesheet" href="{{ page.baseurl }}/cms/css/modern-screen.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A conversation about the past, present, and future state of responsive web design with special guests Ethan Marcotte and Karen McGrane hosted by Aquent Gymnasium on Thursday, December 8, 2–3 PM ET">
+  <meta name="author" content="Aquent Gymnasium">
+  <meta property="og:image" content="{{ page.baseurl }}/cms/img/state-of-rwd-live-event.png">
+ <meta property="og:description" content="A conversation about the past, present, and future state of responsive web design with special guests Ethan Marcotte and Karen McGrane hosted by Aquent Gymnasium on Thursday, December 8, 2–3 PM ET.">
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.slim.min.js"></script>
+  <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.1/jquery.validate.min.js"></script>
+
+
+        <title>{{ page.title }}</title>
+
+    </head>
+    <body>
+        <header id="brand">
+          <div class="structure">
+
+          <div class="logo">
+            <a href="https://thegymnasium.com" title="Home"><img alt="Aquent Gymnasium (The Gymnasium)" srcset="{{ page.baseurl }}/cms/img/gymnasium-logo-ko.svg" src="{{ page.baseurl }}/img/gymnasium-logo-ko.png" role="heading"></a>
+          </div>
+
+          </div>
+        </header>
+
+        <main class="content structure">
+
+        <article>
+
+        <header class="main-header event-header">
+          <h1>Live Event</h1>
+          <h2>Registration</h2>
+        </header>
+
+        <header class="event-banner-hero">
+          <h1>The State of Responsive <span class="nowrap">Web Design</span></h1>
+          <h2>with Ethan Marcotte and <span class="nowrap">Karen McGrane</span></h2>
+          <h3 class="datetime">Thursday, December 8, <span class="nowrap">2–3 PM ET</span></h3>
+        </header>
+
+        <p class="call-out">A conversation about the past, present, and future state of responsive web design with special guests Ethan Marcotte and Karen McGrane.</p>
+
+        <div class="registration-closed" role="note">
+          <h2>Registration is closed.</h2>
+          <p>Please complete the form below to receive a link to the recording (in approximately two weeks).</p>
+        </div>
+
+
+
+{{ content }}
+</article>
+
+<!-- sidebar -->
+
+<aside>
+
+
+<header>
+  <h1>Our Presenters</h1>
+</header>
+    {% for speaker in page.speaker %}
+     {% include /bios/{{speaker}}.html %}
+    {% endfor %}
+
+    <header>
+      <h1>Our Host</h1>
+    </header>
+{% for host in page.host %}
+{% include /bios/{{host}}.html %}
+{% endfor %}
+</aside>
+
+</main>
+
+<footer id="contentinfo">
+  <div class="structure">
+    <div class="copyright">
+      <p><small>© 2016 <a href="https://thegymnasium.com" title="Home">Aquent Gymnasium</a></small></p>
+    </div>
+  </div>
+</footer>
+<hr>
+
+<pre>
+<b>Debug Details</b>
+site.url: {{ site.url }}
+site.baseurl: {{ site.baseurl }}
+page.url: {{ page.url }}
+page.baseurl: {{ page.baseurl }}
+</pre>
+
+
+    </body>
+</html>
